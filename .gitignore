@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.idea/
+.vscode/
+
+# Private or third-party geometry and generated results
+data/
+outputs/
+*.obj
+*.ply
+*.stl
+*.off
+*.glb
+*.gltf
+*.xlsx
+
+.DS_Store
+Thumbs.db

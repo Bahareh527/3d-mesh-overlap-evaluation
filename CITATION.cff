@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Quantitative Evaluation of 3D Mesh Overlap"
+type: software
+version: 1.0.0
+date-released: 2026-09-12
+authors:
+  - family-names: Keshavarz
+    given-names: Bahareh
+  - family-names: Afkhami Zadeh
+    given-names: Aida
+repository-code: "https://github.com/Bahareh527/3d-mesh-overlap-evaluation"
+license: MIT

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mesh-overlap-evaluation"
+version = "1.0.0"
+description = "Reproducible rigid point-cloud registration and 3D overlap evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Bahareh Keshavarz"},
+  {name = "Aida Afkhami Zadeh"},
+]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+open3d = ["open3d>=0.18"]
+notebook = ["jupyter>=1.0", "matplotlib>=3.8"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+mesh-overlap = "mesh_overlap.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Bahareh527/3d-mesh-overlap-evaluation"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
